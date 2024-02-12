@@ -8,21 +8,32 @@
     * {
       box-sizing: border-box;
     }
-    html, body {
+    body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow-x: hidden; /* Prevent horizontal overflow */
     }
     iframe {
-      width: 100vw; 
-      height: 100vh;
+      width: 100%; /* Initial width */
+      height: 100vh; /* Initial viewport height */
       border: none;
-      overflow: auto; /* Enable scroll if content is larger than the iframe */
+      overflow: auto; /* Allow scrolling within the iframe if needed */
     }
   </style>
 </head>
 <body>
-  <iframe src="https://jduncan017.github.io/resume/JoshDuncan.pdf" allowfullscreen></iframe>
+  <iframe id="resumeIframe" src="https://jduncan017.github.io/resume/JoshDuncan.pdf" allowfullscreen></iframe>
+  <script>
+    function resizeIframe() {
+      const iframe = document.getElementById('resumeIframe');
+      iframe.style.height = window.innerHeight + 'px';
+      iframe.style.width = window.innerWidth + 'px';
+    }
+    // Resize the iframe when the window loads
+    window.addEventListener('load', resizeIframe);
+    // Resize the iframe when the window's size changes
+    window.addEventListener('resize', resizeIframe);
+  </script>
 </body>
 </html>
