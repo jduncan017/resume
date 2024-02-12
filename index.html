@@ -8,18 +8,17 @@
     * {
       box-sizing: border-box;
     }
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow-x: hidden; /* Prevent horizontal overflow */
     }
     iframe {
-      width: 1px; /* Minimum width */
-      min-width: 100%; /* Ensure it takes up at least the viewport width */
-      *width: 100%; /* For older browsers */
-      height: 100vh; /* Viewport height */
+      width: 100vw; 
+      height: 100vh;
       border: none;
+      overflow: auto; /* Enable scroll if content is larger than the iframe */
     }
   </style>
 </head>
