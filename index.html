@@ -5,21 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Josh Duncan's Resume</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+      overflow-y: auto; /* Allow vertical scrolling if necessary */
     }
     iframe {
       width: 100%;
       height: 100%;
       border: none;
+      display: block; /* Ensure iframe is not causing extra space */
     }
   </style>
 </head>
 <body>
   <iframe src="https://jduncan017.github.io/resume/JoshDuncan.pdf" allowfullscreen></iframe>
-  <p>If the resume does not display correctly, please <a href="https://jduncan017.github.io/resume/JoshDuncan.pdf" target="_blank">click here</a> to view it.</p>
+  <!-- Fallback link for users if the iframe doesn't display properly -->
+  <p style="text-align:center; margin-top: 20px;">
+    If the resume does not display correctly, please <a href="https://jduncan017.github.io/resume/JoshDuncan.pdf" target="_blank">click here</a> to view it.
+  </p>
 </body>
 </html>
