@@ -13,21 +13,17 @@
       padding: 0;
       height: 100%;
       overflow-x: hidden; /* Prevent horizontal overflow */
-      overflow-y: auto; /* Allow vertical scrolling if necessary */
     }
     iframe {
-      width: 100%;
-      height: 100%;
+      width: 1px; /* Minimum width */
+      min-width: 100%; /* Ensure it takes up at least the viewport width */
+      *width: 100%; /* For older browsers */
+      height: 100vh; /* Viewport height */
       border: none;
-      display: block; /* Ensure iframe is not causing extra space */
     }
   </style>
 </head>
 <body>
   <iframe src="https://jduncan017.github.io/resume/JoshDuncan.pdf" allowfullscreen></iframe>
-  <!-- Fallback link for users if the iframe doesn't display properly -->
-  <p style="text-align:center; margin-top: 20px;">
-    If the resume does not display correctly, please <a href="https://jduncan017.github.io/resume/JoshDuncan.pdf" target="_blank">click here</a> to view it.
-  </p>
 </body>
 </html>
